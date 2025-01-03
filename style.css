@@ -132,3 +132,445 @@ section {
 ::-webkit-scrolbar-thumb {
   background: linear-gradient(to buttom, #6cff52, #3ec5ff);
 }
+
+/* About Me section */
+#about {
+  background-color: var(--second-background); /* Custom background color */
+  display: flex;
+  justify-content: space-between; /* Adjust the positioning */
+  align-items: center;
+  gap: 3em;
+  padding: 1em 3%; /* Adequate padding for spacing */
+  border-radius: 15px; /* Rounded corners for the section */
+}
+
+/* About Box - Text Section */
+.about-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.5em;
+  flex-basis: 60%; /* Control width */
+}
+
+/* Heading Styling */
+.about-info h1 {
+  font-size: 4em; /* Make the heading more balanced */
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 0.5em;
+  margin-top: auto;
+}
+
+.about-info p {
+  color: white;
+  opacity: 0.85; /* Slightly more opaque for readability */
+  line-height: 1.7em; /* Improve line spacing */
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+.aboutMe-img {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.aboutMe-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Image */
+.aboutMe-img img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.skills {
+  display: flex;
+  text-align: left;
+  gap: 10em;
+}
+.skills ul {
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  opacity: 0.8;
+  align-items: baseline;
+  gap: 1.8em;
+}
+.skills ul li span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.23m;
+  transition: 0.3s ease-in-out;
+}
+.skills ul li span:hover {
+  transform: translateX(10px);
+}
+.skills ul li {
+  font-size: 1.2em;
+}
+.about-box h2 {
+  font-size: 2.5em;
+}
+/* <!-- Services Section --> */
+#services {
+  background-color: var(--second-background);
+}
+.header {
+  text-align: center;
+  font-size: 5em;
+  margin: 0.5em 0;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+}
+.box {
+  border: 3px solid rgb(49, 49, 49);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  object-fit: cover;
+  padding: 2.5em;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.box:hover {
+  border: 3px solid rgb(100, 100, 100);
+}
+.box p {
+  opacity: 1;
+  color:burlywood ;
+}
+.box h1 {
+  font-size: 2em;
+}
+.box img {
+  
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 30vh; /
+  
+}
+
+/* Contact */
+#contact{
+     background-color: var(--second-background);
+
+}
+form{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 2em;
+}
+form .input-box{
+     display: flex;
+     flex-direction: column;
+     align-items: baseline;
+     gap: 1em;
+     
+}
+form input{
+     font-size: 1.3em;
+     padding: 1em 5em;
+     border-radius: 0.5em;
+     border: none;
+     outline: none;
+}
+form input:focus{
+     background: rgb(229,229,229);
+}
+form .btn{
+     color: black;
+     font-weight: bold;
+}
+form .btn:hover{
+     color:blue;
+     background-color: green;
+}
+
+
+/* footer */
+footer{
+     display: flex;
+     align-items: center;
+     gap: 25em;
+     bottom: 0;
+     background-color: var(--second-background);
+     width: 100%;
+     padding: 5em 15%;
+}
+.col-left{
+     display: flex;
+     flex-direction: column;
+     gap: 1em;
+     font-size: large;
+}
+.col-box{
+     display: flex;
+     align-items: center;
+     gap: 1em;
+}
+.col-box{
+  font-size: 2em;
+}
+.col-box span{
+  font-size: 0.6em;
+}
+.col-right{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  max-width: 500px;
+
+}
+.col-right span{
+  font-size: 1.3em;
+
+}
+.col-box .social-icons{
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1em;
+}
+.col-right .social-icons{
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+}
+.social-icons i:hover{
+  color: white;
+
+}
+@media(max-width:968px){
+  section{
+    padding: 8em 15%;
+  }
+  nav .btn{
+    display:none;
+  }
+  #menu{
+    display:block;
+  }
+  .links{
+    position:absolute;
+    top: 100%;
+    width: 100%;
+    padding: 1em 3em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background:rgba(0,0,0,0.9);
+  }
+  .links a{
+    margin: 2em;
+    display: block;
+    font-size: 1.5em;
+    color:white;
+  }
+  .links.active{
+    display: block;
+  }
+  #home h1{
+    font-size:4em;
+
+  }
+  #home h3{
+    font-size: 2em;
+  }
+  #home img{
+    width: 24vw;
+  }
+  #about{
+    flex-direction: column;
+  }
+  #about img{
+    width: 32vw;
+  }
+  #about h1{
+    font-size: 3em;
+  }
+  #about ul{
+    font-size: 1em;
+  }
+}
+@media(max-width:768){
+  #home h1{
+    font-size:2.5em;
+
+  }
+  #home h3{
+    font-size: 1.5em;
+  }
+  #home img{
+    width: 32vw;
+  }
+  #about .skills{
+    gap:3em;
+  }
+  #services.header{
+    font-size: 3em;
+  }
+  #contact .header{
+    font-size: 3em;
+  }
+  #contact .input-box span{
+    font-size: 1.2em;
+  }
+  .input-box input{
+    padding: 0.5em 1em;
+
+  }
+  footer{
+    flex-direction: column;
+    gap: 5em;
+    align-items: left;
+  }
+}
+@media(max-width:480px) {
+  /* Nav bar adjustments */
+  nav {
+    padding: 1em 5%; /* Reduced padding for smaller screens */
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+  ul {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 1.5em; /* Adjust gap between items */
+    margin-top: 1em; /* Space between the logo and nav items */
+  }
+  nav ul a {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+  #menu {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  /* Home Section Adjustments */
+  #home {
+    padding: 2em 5%; /* Adjust padding for mobile */
+  }
+  #home img {
+    width: 50vw; /* Increase image size for better visibility */
+  }
+  .info-box h1 {
+    font-size: 2.5em; /* Adjust heading font size */
+  }
+  .info-box h3 {
+    font-size: 1.5em; /* Adjust subheading font size */
+  }
+  .info-box p {
+    font-size: 1.1em; /* Adjust paragraph font size */
+  }
+
+  /* About Section Adjustments */
+  #about {
+    flex-direction: column; /* Stack about section vertically */
+    padding: 2em 5%; /* Adjust padding for mobile */
+  }
+  .about-box {
+    flex-basis: 100%; /* Full width for text section */
+  }
+  .aboutMe-img {
+    width: 80%; /* Adjust image size */
+    margin-bottom: 2em; /* Add spacing below the image */
+  }
+  .about-info h1 {
+    font-size: 2.5em; /* Adjust heading font size */
+  }
+  .about-info p {
+    font-size: 1.1em; /* Adjust paragraph font size */
+  }
+
+  /* Skills Section Adjustments */
+  .skills {
+    flex-direction: column; /* Stack skills vertically */
+    gap: 2em; /* Adjust gap between skill items */
+  }
+  .skills ul li {
+    font-size: 1.1em; /* Adjust font size for mobile */
+  }
+
+  /* Services Section Adjustments */
+  #services {
+    padding: 2em 5%; /* Adjust padding for mobile */
+  }
+  .header {
+    font-size: 3em; /* Adjust heading font size */
+  }
+  .services-container {
+    grid-template-columns: 1fr; /* Stack services in a single column */
+    gap: 1em; /* Adjust gap between service boxes */
+  }
+  .box {
+    padding: 1.5em; /* Reduce padding inside service boxes */
+  }
+  .box h1 {
+    font-size: 1.8em; /* Adjust font size */
+  }
+  .box img {
+    height: 20vh; /* Adjust image size */
+  }
+
+  /* Contact Section Adjustments */
+  #contact {
+    padding: 2em 5%; /* Adjust padding */
+  }
+  form .input-box {
+    gap: 1.5em; /* Adjust gap between input fields */
+  }
+  form input {
+    padding: 1em; /* Adjust padding for smaller inputs */
+    font-size: 1.2em; /* Adjust font size */
+    width: 100%; /* Full-width input fields */
+  }
+  form .btn {
+    padding: 1em 3em; /* Adjust button padding */
+    font-size: 1.2em; /* Adjust button font size */
+  }
+
+  /* Footer Section Adjustments */
+  footer {
+    flex-direction: column; /* Stack footer content vertically */
+    gap: 2em; /* Adjust gap between footer items */
+    padding: 2em 5%; /* Adjust padding for mobile */
+  }
+  .col-left, .col-right {
+    font-size: 1.2em; /* Adjust font size */
+    gap: 1em; /* Adjust gap between items */
+  }
+  .col-box {
+    font-size: 1.5em; /* Adjust font size */
+  }
+  .col-right .social-icons {
+    font-size: 1.8em; /* Adjust social icon size */
+  }
+
+  /* Scrollbar Adjustments for smaller devices */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6cff52, #3ec5ff); /* Custom scrollbar */
+  }
+}
+

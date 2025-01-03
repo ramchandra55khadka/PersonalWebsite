@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --background: rgb(24, 24, 24);
+  --second-background: rgb(21, 21, 21);
+}
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+/* //Nav bar css */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2em 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+ul {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+nav ul a {
+  color: white;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+nav ul aa:hover {
+  opacity: 1;
+}
+.logo {
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+.logo:hover {
+  opacity: 1;
+}
+.btn {
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: white;
+  color: var(--background);
+}
+span {
+  background: linear-gradient(to right, #1cb102, #047bae);
+  background-clip: text;
+  color: transparent;
+}
+#menu {
+  color: white;
+  font-size: 3em;
+  display: none;
+}
+
+.nav-items {
+  font-size: 19px;
+}
+
+/* Body sectin */
+section {
+  min-height: 100vh;
+  padding: 5% 15%;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: white;
+}
+#home img {
+  width: 18vw;
+  border-radius: 50%;
+  margin-top: 2em;
+}
+.info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  max-width: 600px;
+}
+.info-box h1 {
+  font-size: 2.9em;
+  font-weight: 500;
+}
+.info-box h3 {
+  font-size: 1.9em;
+  font-weight: 400;
+}
+.info-box p {
+  opacity: 0.7;
+}
+.btn-box {
+  display: flex;
+  gap: 1em;
+}
+.btn-box .btn:nth-of-type(2) {
+  background-color: white;
+  color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover {
+  background-color: var(--background);
+  color: white;
+}
+::-webkit-scrolbar-thumb {
+  background: linear-gradient(to buttom, #6cff52, #3ec5ff);
+}

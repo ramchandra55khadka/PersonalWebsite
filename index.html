@@ -214,6 +214,14 @@
       </div>
     </footer>
     
-    <script src="script.js"></script>
+    <script>
+        const menu = document.querySelector("#menu");
+  const nav = document.querySelector(".links");
+  menu.onclick = () => {
+    menu.classList.toggle("bx-x");
+    nav.classList.toggle("active");
+  };
+
+    </script>
   </body>
 </html>

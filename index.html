@@ -23,8 +23,9 @@
         </ul>
       </div>
 
-      <i class="bx-bx-menu-alt-right" id="menu"></i>
-      <a href="#contact" class="btn">Contact Me</a>
+      <i class="bx bx-menu" id="menu"></i>
+      <!-- <a href="resume.pdf" download="resume.pdf" class="btn">Download Resume</a> -->
+      <!-- <a href="resume.pdf" download="resume.pdf" class="btn">Download Resume</a> -->
     </nav>
 
     <!-- home section -->
@@ -44,7 +45,8 @@
       </div>
       <div class="btn-box">
         <div class="btn">Hire Me</div>
-        <div class="btn">Contact</div>
+        <div class="btn"><a href="resume.pdf" download="resume.pdf">Download Resume</a>
+        </div>
       </div>
     </section>
 
@@ -69,7 +71,7 @@
             create intuitive and impactful digital experiences.
           </p>
         </div>
-        <h2><span>Skills</span></h2>
+        <h2 style="margin-left: 30px;"><span>Skills</span></h2>
         <div class="skills">
           <ul>
             <li>
@@ -152,7 +154,7 @@
       <h1 class="header"><span>Contact</span></h1>
       <form action="#">
         <div class="input-box">
-          <span>Full Name</span>
+          <span><h2 style="text-align: center;">Full Name</span></h2>
           <input
             type="text"
             name=""
@@ -162,7 +164,7 @@
           />
         </div>
         <div class="input-box">
-          <span>Your Email</span>
+          <span><h2 style="text-align: center;">Your Email</span></h2>
           <input
             type="email"
             name=""
@@ -172,7 +174,7 @@
           />
         </div>
         <div class="input-box">
-          <span>Your Message</span>
+          <span><h2 style="text-align: center;">Your Message</span></h2>          
           <input
             type="text"
             name=""
@@ -181,55 +183,37 @@
             required
           />
         </div>
-        <button class="btn" onclick="handleSubmit()">Submit</button>
+        <button class="btn" onclick="handleSubmit()"><h2>Submit</h2></button>
       </form>
     </section>
 
     <footer>
-      <div class="col-left">
-        <div class="col-box">
-          <span><i class="bx bxs-location-plus"></i></span>
-          <span>Kathmandu,Nepal</span>
-        </div>
-        <div class="col-box">
-          <span><i class="bx bx-phone"></i> </span>
-          <span>+977 9866835892</span>
-        </div>
-        <div class="col-box">
-          <span><i class="bx bx-envelope"></i> </span>
-          <a href="https://khadkaramchandra981@gmail.com">
-            <span>khadkaramchandra981@gmail.com</span>
-          </a>
-        </div>
-      </div>
       <div class="col-right">
-        <span> Follow Me on</span>
-
+        <span>
+          <h3 style="margin-left: 0; text-align: center;">
+            Follow Me on
+          </h3>
+        </span>
         <div class="social-icons">
           <a href="https://www.facebook.com/ramchandra.khadka.33865">
             <span><i class="bx bxl-facebook-square"></i></span>
           </a>
           <a href="https://www.x.com/Ramchandra_55">
-            <span>
-              <i class="bx bxl-twitter"></i>
-              <!-- Twitter -->
-            </span>
+            <span><i class="bx bxl-twitter"></i></span>
           </a>
           <a href="https://www.linkedin.com/in/ramchandra-khadka-406938279">
-            <span>
-              <i class="bx bxl-linkedin-square"></i>
-              <!-- LinkedIn -->
-            </span>
+            <span><i class="bx bxl-linkedin-square"></i></span>
           </a>
           <a href="https://www.github.com/ramchandra55khadka">
-            <span>
-              <i class="bx bxl-github"></i>
-              <!-- GitHub -->
-            </span>
+            <span><i class="bx bxl-github"></i></span>
           </a>
         </div>
       </div>
+      <div class="copyright">
+        <p >&copy; Copyright 2025 Ramchandra Khadka. All rights reserved.</p>
+      </div>
     </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>

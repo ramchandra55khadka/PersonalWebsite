@@ -1,3 +1,4 @@
+/* this is original code */
 * {
   margin: 0;
   padding: 0;
@@ -37,10 +38,23 @@ nav ul a {
   color: white;
   opacity: 0.7;
   transition: 0.2s ease-in-out;
+  border-radius: 0.5em; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-color: rgba(15, 15, 15, 0.8);
+  padding: 5px;
+  
 }
-nav ul aa:hover {
+  
+nav ul a:hover {
   opacity: 1;
+  background-color: white;
+  color: var(--background);
+  
 }
+  
+
 .logo {
   font-size: 2em;
   color: white;
@@ -61,24 +75,26 @@ nav ul aa:hover {
   border: 2px solid white;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-}
-.btn:hover {
-  background-color: white;
-  color: var(--background);
-}
-span {
-  background: linear-gradient(to right, #1cb102, #047bae);
-  background-clip: text;
-  color: transparent;
-}
-#menu {
-  color: white;
-  font-size: 3em;
-  display: none;
-}
+  }
+  
+  .btn:hover {
+    background-color: white;
+    color: var(--background);
+    }
+    span {
+      background: linear-gradient(to right, #1cb102, #047bae);
+      background-clip: text;
+      color: transparent;
+      }
+      #menu {
+        color: white;
+        font-size: 3em;
+        display: none;
+        }
+        
 
 .nav-items {
-  font-size: 19px;
+  font-size: 25px;
 }
 
 /* Body sectin */
@@ -97,7 +113,7 @@ section {
 #home img {
   width: 18vw;
   border-radius: 50%;
-  margin-top: 2em;
+  margin-top: 4em;
 }
 .info-box {
   display: flex;
@@ -116,6 +132,7 @@ section {
 }
 .info-box p {
   opacity: 0.7;
+  font-size: 17px;
 }
 .btn-box {
   display: flex;
@@ -160,7 +177,8 @@ section {
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 0.5em;
-  margin-top: auto;
+  margin-top: 1.1em;
+  margin-left: 45px;
 }
 
 .about-info p {
@@ -169,6 +187,7 @@ section {
   line-height: 1.7em; /* Improve line spacing */
   font-size: 1.2em;
   margin-bottom: 1.5em;
+  margin-left: 5px;
 }
 .aboutMe-img {
   width: 35%;
@@ -274,6 +293,9 @@ section {
      background-color: var(--second-background);
 
 }
+#contact h1{
+  margin-top: 0.1em;
+}
 form{
      display: flex;
      flex-direction: column;
@@ -308,144 +330,258 @@ form .btn:hover{
 }
 
 
+
 /* footer */
-footer{
-     display: flex;
-     align-items: center;
-     gap: 25em;
-     bottom: 0;
-     background-color: var(--second-background);
-     width: 100%;
-     padding: 5em 15%;
-}
-.col-left{
-     display: flex;
-     flex-direction: column;
-     gap: 1em;
-     font-size: large;
-}
-.col-box{
-     display: flex;
-     align-items: center;
-     gap: 1em;
-}
-.col-box{
-  font-size: 2em;
-}
-.col-box span{
-  font-size: 0.6em;
-}
-.col-right{
+footer {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  color: white;
-  max-width: 500px;
-
+  align-items: center;
+  gap: 1.5em;
+  background-color: var(--second-background);
+  width: 100%;
+  padding: 2em 15%;
 }
-.col-right span{
-  font-size: 1.3em;
 
-}
-.col-box .social-icons{
+.col-right {
   display: flex;
-  align-items: baseline;
-  justify-content: left;
+  flex-direction: column;
+  align-items: center;
   gap: 1em;
-}
-.col-right .social-icons{
-  font-size: 2em;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-
-}
-.social-icons i:hover{
   color: white;
-
 }
-@media(max-width:968px){
+
+.col-right h3 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  font-size: 2em;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-icons i {
+  transition: color 0.2s ease-in-out;
+}
+
+.social-icons i:hover {
+  color: var(--primary-color, white); /* Use a primary color or white */
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav-items {
+    font-size: 18px;
+  }
+  footer {
+    padding: 2em 10%;
+  }
+
+  .social-icons {
+    gap: 1.5em;
+    font-size: 1.8em;
+  }
+
+  .col-right h3 {
+    font-size: 1.5em;
+  }
+
+  .copyright {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5em 5%;
+  }
+
+  .social-icons {
+    gap: 2.8em;
+    font-size: 1.5em;
+    
+  }
+
+  .col-right h3 {
+    font-size: 1.2em;
+    text-align: center;
+    /* margin-left: 50px; */
+  }
+
+  .copyright {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+
+
+/* //this is original media query code */
+/* Updated media query code for improved responsiveness */
+@media(max-width: 968px) {
   section{
-    padding: 8em 15%;
+    padding: 6em 10%;
   }
   nav .btn{
-    display:none;
+    display: none;
   }
   #menu{
-    display:block;
+    display: block;
   }
   .links{
     position:absolute;
+    left: 15%;
     top: 100%;
     width: 100%;
     padding: 1em 3em;
     color: white;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    background:rgba(0,0,0,0.9);
+    flex-direction: column; 
+    
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
   }
-  .links a{
-    margin: 2em;
-    display: block;
+  .links a {
+    margin: 1.5em;
+    display: block; 
     font-size: 1.5em;
-    color:white;
+    color: white;
   }
-  .links.active{
+
+
+
+  .links.active {
     display: block;
   }
-  #home h1{
-    font-size:4em;
 
+  #home h1 {
+    font-size: 3.5em;
   }
-  #home h3{
-    font-size: 2em;
+
+  #home h3 {
+    font-size: 1.8em; 
   }
-  #home img{
+
+  #home img {
     width: 24vw;
   }
-  #about{
+
+  #about {
     flex-direction: column;
+    padding: 3em 0; 
   }
-  #about img{
+
+  #about img {
     width: 32vw;
   }
-  #about h1{
-    font-size: 3em;
+
+  #about h1 {
+    font-size: 2.8em;
   }
-  #about ul{
-    font-size: 1em;
+
+  #about ul {
+    font-size: 1.1em;
   }
 }
-@media(max-width:768){
-  #home h1{
-    font-size:2.5em;
 
+
+@media(max-width: 768px) {
+  .nav-items {
+    font-size: 25px;
   }
-  #home h3{
+  
+  
+  #home h1 {
+    font-size: 2.5em;
+  }
+  
+  #home h3 {
     font-size: 1.5em;
   }
-  #home img{
+  
+  #home img {
     width: 32vw;
   }
-  #about .skills{
-    gap:3em;
+  
+  #about .skills {
+    gap: 2.5em; 
   }
-  #services.header{
-    font-size: 3em;
+  
+  #services .header {
+    font-size: 2.5em; 
+    
   }
-  #contact .header{
-    font-size: 3em;
+    #contact .header {
+      font-size: 2.5em;
+    }
+    
+    #contact .input-box span {
+      font-size: 1.2em;
+    }
+    
+    .input-box input {
+      padding: 0.5em 1em;
+    }
+    
+    footer {
+      flex-direction: column;
+      gap: 4em;
+      align-items: flex-start; 
+    }
+}
+
+@media(max-width: 480px) {
+  section {
+    padding: 5em 5%; /* Reduced padding for very small screens */
   }
-  #contact .input-box span{
+  .nav-items {
+    font-size: 14px;
+  }
+
+  #home h1 {
+    font-size: 2em; /* Smaller font size for very small screens */
+  }
+
+  #home h3 {
     font-size: 1.2em;
   }
-  .input-box input{
-    padding: 0.5em 1em;
 
+  #about h1 {
+    font-size: 2.5em; /* Adjusted heading size */
+    margin-top: 2.3em;
   }
-  footer{
-    flex-direction: column;
-    gap: 5em;
-    align-items: left;
+
+  #about img {
+    width: 80%; /* Adjusted image size */
+  }
+
+  .skills ul li {
+    font-size: 1.1em; /* Adjusted for readability */
+  }
+
+  #services .header {
+    font-size: 2.8em; /* Reduced header size */
+    margin-top: 1.4em;
+  }
+  #contact .header{
+    margin-top: 1.3em;
+  }
+
+  footer {
+    gap: 2em; /* Further reduced gap */
   }
 }

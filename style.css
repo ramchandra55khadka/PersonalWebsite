@@ -520,7 +520,10 @@ footer {
   #about .skills {
     gap: 2.5em; 
   }
-  
+  #about img {
+    width: 90%;
+    max-width: none; /* Adjusted image size */
+  }
   #services .header {
     font-size: 2.5em; 
     
@@ -566,7 +569,8 @@ footer {
   }
 
   #about img {
-    width: 80%; /* Adjusted image size */
+    width: 100%;
+    max-width: none; /* Adjusted image size */
   }
 
   .skills ul li {
@@ -584,4 +588,5 @@ footer {
   footer {
     gap: 2em; /* Further reduced gap */
   }
+ 
 }

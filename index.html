@@ -117,7 +117,7 @@
             design principles, I ensure that every element of your website or
             application is designed with the user's needs in mind.
           </p>
-          <img src="uiux.png" alt="ui/ux design" />
+          <img src="uiux1.jpg" alt="ui/ux design" />
         </div>
         <div class="box">
           <h1><span> Data Analysis and Insights </span></h1>
@@ -152,47 +152,54 @@
     <!-- Contact Section -->
     <section id="contact">
       <h1 class="header"><span>Contact</span></h1>
-      <form action="#">
+      <form action="#" onsubmit="return handleSubmit(event)">
         <div class="input-box">
           <span><h2 style="text-align: center;">Full Name</span></h2>
           <input
             type="text"
-            name=""
-            id=""
+            name="fullName"
+            id="fullName"
             placeholder="Enter Your Full Name"
             required
           />
+          <div id="name-message" style="margin-top: 5px; text-align: center; font-size: 1,3em; color: red;font-style: italic;"></div>
         </div>
         <div class="input-box">
           <span><h2 style="text-align: center;">Your Email</span></h2>
           <input
             type="email"
-            name=""
-            id=""
+            name="email"
+            id="email"
             placeholder="Enter Your Email"
             required
           />
+          <div id="email-message" style="margin-top: 5px; text-align: center; font-size: 1.3em; color: red;font-style: italic;"></div>
+
         </div>
         <div class="input-box">
           <span><h2 style="text-align: center;">Your Message</span></h2>          
           <input
             type="text"
-            name=""
-            id=""
+            name="message"
+            id="message"
             placeholder="Enter Your Message"
             required
           />
+          <div id="m-message" style="margin-top: 5px; text-align: center; font-size: 1.3em; color: red; font-style: italic;"></div>
+
         </div>
-        <button class="btn" onclick="handleSubmit()"><h2>Submit</h2></button>
+        <button class="btn"><h2>Submit</h2></button>
       </form>
+      <div id="submission-message" style="margin-top: 20px; text-align: center; font-size: 1.3em; color:limegreen; font-style: italic;"></div>
+
     </section>
 
     <footer>
       <div class="col-right">
         <span>
-          <h3 style="margin-left: 0; text-align: center;">
+          <h1 style="margin-left: 0; text-align: center;">
             Follow Me on
-          </h3>
+          </h1>
         </span>
         <div class="social-icons">
           <a href="https://www.facebook.com/ramchandra.khadka.33865">
@@ -220,8 +227,72 @@
       menu.onclick = () => {
       menu.classList.toggle("bx-x");
       nav.classList.toggle("active");
-     
+
+      //for contact form
     }
+    function handleSubmit(event) {
+    event.preventDefault(); // Prevent the form from reloading the page
+
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const messageContainer = document.getElementById("submission-message");
+    const nameContainer=document.getElementById("name-message");
+    const emailContainer=document.getElementById("email-message");
+    const mContainer=document.getElementById("m-message");
+
+     // Clear previous error messages
+  nameContainer.textContent = "";
+  emailContainer.textContent = "";
+  mContainer.textContent = "";
+  messageContainer.textContent = "";
+
+
+
+    // Validation
+    if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+      // alert("Full Name must only contain letters and spaces.");
+      messageContainer.style.color = "red";
+      nameContainer.textContent = "Full Name must only contain letters and spaces.";
+      
+
+      return false;
+    }
+
+    if (
+      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)
+    ) {
+      // alert("Please enter a valid email address.");
+      messageContainer.style.color = "red";
+      emailContainer.textContent="Invalid email address."
+      return false;
+    }
+
+    if (message.length < 10) {
+      // alert("Message must be at least 10 characters long.");
+      messageContainer.style.color = "red";
+      mContainer.textContent="Message must be at least 10 characters long."
+      return false;
+    }
+
+    // Success message
+    // alert(
+    //   `Thank you, ${fullName}, for reaching out! I have received your message: "${message}". We will contact you soon at ${email}.`
+    // );
+        // Display success message
+    messageContainer.style.color = "limegreen";
+    messageContainer.textContent = `Thank you, ${fullName}, for reaching out! I have received your message.I will contact you soon at ${email}.`;
+
+    // Clear the form fields
+    document.getElementById("fullName").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    return true; // Optionally allow form submission
+
+
+    // return true; // Allow the form submission if needed
+  }
     
     </script>
   </body>
